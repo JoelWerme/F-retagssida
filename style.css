@@ -8,7 +8,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 13% 3fr 1fr;
-  grid-template-rows: 20vh auto;
+  grid-template-rows: 8rem auto;
   background-color: #ffffff;
 }
 
