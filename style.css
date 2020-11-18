@@ -112,8 +112,17 @@ nav a:hover {
 }
 
 @media screen and (max-width: 1000px){
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 15vw 2fr 5rem;
+    grid-template-rows: 8rem auto;
+    background-color: #ffffff;
+    min-height: 100vh;
+  }
+
   .nav-area {
-    position: fixed;
+    position: static;
     top: 7rem;
     font-size: 6vw;
     color: #3f8efc;
@@ -130,8 +139,8 @@ nav a:hover {
     background-color: #404040;
     color: #ffffff;
     top: 8rem;
-    left: -10vw;
-    width: 8vw;
+    left: -15vw;
+    width: 15vw;
     height: auto;
     min-height: 100vh;
     display: flex;
@@ -141,7 +150,7 @@ nav a:hover {
   nav p{
     padding: 1vw;
     color: #3f8efc;
-    font-size: 1vw;
+    font-size: 2vw;
     text-decoration: none;
     transition: all 0.4s ease 0s;
   }
@@ -154,7 +163,7 @@ nav a:hover {
   nav a {
     padding: 1vw;
     color: #ffffff;
-    font-size: 1vw;
+    font-size: 2vw;
     text-decoration: none;
     transition: all 0.4s ease 0s;
   }
@@ -171,6 +180,17 @@ nav a:hover {
   .nav-toggle:checked + nav {
     left: 0;
    }
+
+   main .content {
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+  }
+  
+  main .content * {
+    height: 25vw;
+    background-color: #3f8efc;
+  }
 }
 
 
