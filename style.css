@@ -7,7 +7,7 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-columns: 8rem 3fr 10rem;
+  grid-template-columns: 8vw 3fr 10rem;
   grid-template-rows: 8rem auto;
   background-color: #ffffff;
   min-height: 100vh;
@@ -95,6 +95,7 @@ nav {
 nav a {
   padding: 1vw;
   color: #ffffff;
+  font-size: 1vw;
   text-decoration: none;
   transition: all 0.4s ease 0s;
 }
@@ -103,6 +104,75 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #202020;
 }
+
+@media screen and (min-width: 1000px){
+  .nav-area{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .nav-area {
+    position: fixed;
+    top: 7rem;
+    font-size: 6vw;
+    color: #3f8efc;
+    padding: 1.5vw;
+    padding-top: 2vh;
+  }
+
+  nav{
+    display: none;
+  }
+
+  nav{
+    position: fixed;
+    background-color: #404040;
+    color: #ffffff;
+    top: 8rem;
+    left: -10vw;
+    width: 8vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav p{
+    padding: 1vw;
+    color: #3f8efc;
+    font-size: 1vw;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+  }
+
+  nav p:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #202020;
+  }
+
+  nav a {
+    padding: 1vw;
+    color: #ffffff;
+    font-size: 1vw;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+  }
+    
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #202020;
+  }
+
+  .nav-toggle{
+    display: none;
+  }
+
+  .nav-toggle:checked + nav {
+    left: 0;
+   }
+}
+
 
 main {
   background-color: #ffffff;
@@ -114,16 +184,17 @@ main {
 main .content {
   display: grid;
   gap: 1vw;
-  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
 }
 
 main .content * {
-  height: 20vw;
+  height: 15vw;
   background-color: #3f8efc;
 }
 
 main .instrument {
-  margin: 0 2px;
+  background-color: #404040;
+  padding: 3vw;
   display: grid;
   gap: 1vw;
   grid-template-columns: repeat(auto-fill, minmax(8vw, 1fr));
@@ -132,8 +203,7 @@ main .instrument {
 main .instrument * {
   height: 5vw;
   width: 5vw;
-}
-
-main .instrument a img {
-  /* width: 5vw; */
+  background-color: #3f8efc;
+  border-radius: 25%;
+  border: 2px solid #000000;
 }
