@@ -292,10 +292,15 @@ footer {
   text-align: center;
 }
 
+footer p{
+  font-size: 0.9vw;
+}
+
 footer a{
   justify-self: center;
   text-decoration: none;
   color: #ffffff;
+  font-size: 0.9vw;
 }
 
 @media screen and (min-width: 1000px) {
@@ -460,5 +465,13 @@ footer a{
   .nyhetsruta div {
     max-height: 25vw;
     min-height: 25vw;
+  }
+
+  footer p{
+    font-size: 2vw;
+  }
+
+  footer a{
+    font-size: 2vw;
   }
 }
