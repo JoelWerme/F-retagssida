@@ -200,7 +200,7 @@ main {
 
 
 .instrument {
-  background-image: url(/img/produkt.jpg);
+  background-image: url(produkt.jpg);
   background-size: 100%;
   padding: 3vw;
   display: grid;
