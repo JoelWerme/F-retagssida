@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, Times, serif;
 }
 
 body {
   margin: 0;
   display: grid;
-  grid-template-columns: 8vw 3fr 5rem;
-  grid-template-rows: 8rem auto;
+  grid-template-columns: 8vw 3fr 20vw;
+  grid-template-rows: 8rem auto 7rem;
   background-color: #ffffff;
   min-height: 100vh;
 }
@@ -21,18 +22,13 @@ header {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row: 1;
-  padding-right: 2rem;
   border-bottom: 1vh solid #3f8efc;
 }
 
-header p {
+header h1 {
   color: #ffffff;
   align-self: center;
-}
-
-header p:hover {
-  background-color: #ffffff;
-  color: #404040;
+  font-size: 2rem;
 }
 
 header a {
@@ -44,7 +40,7 @@ header a {
 header .logo {
   width: 5rem;
   height: 5rem;
-  margin-left: 1vw;
+  margin-left: 2vw;
   border: solid 2px transparent;
   border-radius: 100%;
 }
@@ -57,7 +53,7 @@ header .logo:hover {
 header .kundvagn {
   width: 5rem;
   height: 5rem;
-  margin-right: 1vw;
+  margin-right: 2vw;
   border: solid 2px transparent;
   border-radius: 100%;
 }
@@ -68,14 +64,13 @@ header .kundvagn:hover {
 }
 
 .items {
-  position: fixed;
+  position: absolute;
   right: 150px;
   top: 50px;
   background-color: #ffffff;
   border: 2px solid #202020;
   height: 300px;
   width: 150px;
-
   display: none;
 }
 
@@ -105,17 +100,229 @@ nav a:hover {
   color: #202020;
 }
 
-@media screen and (min-width: 1000px){
-  .nav-area{
+main {
+  background-color: #ffffff;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: 1vw;
+}
+
+.hem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.hem * {
+  padding: 1vw;
+}
+
+.hem img {
+  width: 100%;
+}
+
+.valkommen {
+  position: absolute;
+  bottom: 70px;
+  left: 10px;
+  color: #ffffff;
+}
+
+.content {
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+}
+
+.content div{
+  height: 15vw;
+  border: 1px solid #404040;
+  background-color: #ffffff;
+  padding: 1vw;
+}
+
+.content * {
+  display: flex;
+  flex-direction: row;
+}
+
+.content img{
+  width: 5.5vw;
+  height: 10vw;
+  background-color: #ffffff;
+  align-self: center;
+}
+
+.content article{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1vw;
+  font-size: 1vw;
+}
+
+.content article *{
+  padding: 0.4vw;
+}
+
+.h-nyheter{
+  margin: 1vw;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.content-nyheter{
+  display: grid;
+  gap: 1vw;
+  padding: 1vw;
+  grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+}
+
+.content-nyheter div{
+  height: 15vw;
+  background-color: #ffffff;
+}
+
+.content-nyheter div *{
+  padding: 1vw;
+  color: #000000;
+}
+
+.content-nyheter h2{
+  font-size: 1.3vw;
+}
+
+.content-nyheter p{
+  font-size: 0.8vw;
+}
+
+
+.instrument {
+  background-image: url(/img/produkt.jpg);
+  background-size: 100%;
+  padding: 3vw;
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: repeat(auto-fill, minmax(8vw, 1fr));
+  border: 2px solid #404040;
+}
+
+.instrument .order {
+  height: 5vw;
+  width: 5vw;
+  background-color: #ffffff;
+  border-radius: 25%;
+  border: 2px solid #000000;
+}
+
+.order{
+  display: flex;
+  flex-direction: column;
+}
+
+.order p{
+  text-align: center;
+  color: #000000;
+  font-size: 0.9vw;
+}
+
+.omoss article{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.omoss article *{
+  padding: 1vw;
+}
+
+.nyhetsruta {
+  grid-column: 3/-1;
+  grid-row: 2/3;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 1vw;
+  margin-top: 2vw;
+  color: #ffffff;
+  font-size: 1vw;
+  border: 2px solid #404040;
+}
+
+.nyhetsruta article {
+  font-size: 1rem;
+  padding: 1vw;
+  background-color: #000000;
+  border-bottom: 5px solid #3f8efc;
+}
+
+.nyhetsruta div {
+  margin: 1vw;
+  margin-top: 1vw;
+  display: flex;
+  max-height: 10vw;
+  min-height: 10vw;
+  padding: 1vw;
+  color: #000000;
+}
+
+.nyhetsruta img {
+  height: 2vw;
+  width: 2vw;
+}
+
+.nyhetsruta img:hover {
+  height: 2vw;
+  width: 2vw;
+}
+
+.vittext {
+  color: #ffffff;
+}
+
+footer {
+  grid-row: 3/-1;
+  grid-column: 1/-1;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer a{
+  justify-self: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-area {
     display: none;
   }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  header .logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  header .kundvagn {
+    width: 3rem;
+    height: 3rem;
+  }
+
   body {
     margin: 0;
     display: grid;
-    grid-template-columns: 15vw 2fr 5rem;
+    grid-template-columns: 15vw 2fr 20vw;
     grid-template-rows: 8rem auto;
     background-color: #ffffff;
     min-height: 100vh;
@@ -130,11 +337,11 @@ nav a:hover {
     padding-top: 1vw;
   }
 
-  nav{
+  nav {
     display: none;
   }
 
-  nav{
+  nav {
     position: fixed;
     background-color: #404040;
     color: #ffffff;
@@ -145,9 +352,10 @@ nav a:hover {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: all 0.5s ease-in-out;
   }
 
-  nav p{
+  nav p {
     padding: 1vw;
     color: #3f8efc;
     font-size: 3vw;
@@ -167,63 +375,90 @@ nav a:hover {
     text-decoration: none;
     transition: all 0.4s ease 0s;
   }
-    
+
   nav a:hover {
     background-color: rgba(255, 255, 255, 0.5);
     color: #202020;
   }
 
-  .nav-toggle{
+  .nav-toggle {
     display: none;
   }
 
   .nav-toggle:checked + nav {
     left: 0;
-   }
+  }
 
-   main .content {
+  .hem {
+    font-size: 0.5rem;
+  }
+
+  .valkommen {
+    position: absolute;
+    bottom: 4vh;
+    left: 1vw;
+    color: #ffffff;
+  }
+
+  .instrument .order {
+    height: 5vw;
+    width: 5vw;
+    background-color: #ffffff;
+    border-radius: 25%;
+    border: 2px solid #000000;
+  }
+
+  .instrument {
+    padding: 3vw;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
+    border: 2px solid #404040;
+  }
+
+  .order p{
+    font-size: 1.5vw;
+  }
+
+  .content {
     display: grid;
     gap: 1vw;
     grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
   }
-  
-  main .content * {
+
+  .content div{
     height: 25vw;
-    background-color: #3f8efc;
+    padding: 1vw;
   }
-}
 
+  .content article{
+    padding-top: 1vw;
+    font-size: 2vw;
+  }
 
-main {
-  background-color: #ffffff;
-  grid-column-start: 2;
-  grid-row-start: 2;
-  margin: 1vw;
-}
+  main .h-nyheter{
+    text-align: center;
+    font-size: 1.5rem;
+  }
 
-main .content {
-  display: grid;
-  gap: 1vw;
-  grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
-}
+  .content-nyheter h2{
+    font-size: 1rem;
+  }
+  
+  .content-nyheter p{
+    font-size: 1vw;
+  }
 
-main .content * {
-  height: 15vw;
-  background-color: #3f8efc;
-}
+  .nyhetsruta {
+    font-size: 1.75vw;
+  }
 
-main .instrument {
-  background-color: #404040;
-  padding: 3vw;
-  display: grid;
-  gap: 1vw;
-  grid-template-columns: repeat(auto-fill, minmax(8vw, 1fr));
-}
+  .nyhetsruta article {
+    font-size: 2vw;
+  }
 
-main .instrument * {
-  height: 5vw;
-  width: 5vw;
-  background-color: #3f8efc;
-  border-radius: 25%;
-  border: 2px solid #000000;
+  .nyhetsruta div {
+    max-height: 25vw;
+    min-height: 25vw;
+  }
 }
